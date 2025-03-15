@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    
     <style>
         body {
             font-family: sans-serif;
@@ -63,17 +64,41 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <input type="hidden" name="_next" value="YOUR_SUCCESS_PAGE_URL">
-            <input type="hidden" name="_captcha" value="false">
-            <button type="submit">Submit</button>
+    
+            <button onclick="sendemail()" type="submit">Submit</button>
         </form>
     </div>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+    <script type="text/javascript">
+      (function()
+       {
+      emailjs.init("L2g4ZVAO5Mtc0tVBK");
+      })();
+      </script>
     <script>
-        // Optional: Client-side validation (basic)
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            // Add more advanced validation if needed.
-        });
+        function sendemail(){
+
+var email=document.getElementById("email").value;
+var from_name=document.getElementById("name").value;
+var message=document.getElementById("message").value;
+
+var templateParams = {
+    email: email,
+    from_name: from_name,
+    message: message
+  };
+
+  emailjs.send('service_3oxeatp', 'template_******', templateParams)
+.then(function(response) {
+ console.log('SUCCESS!', response.status, response.text);
+ window.alert("Sent successfully!");
+ 
+})
+
+ 
+}
     </script>
+
+    
 </body>
 </html>
