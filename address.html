@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Single Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --yellow-color:#ffff00;
+    --red-color:#ff0000;
+    --transition: all 0.3s linear;
+
+}
+/*-------------------------global css------------------------------------*/
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: var(--transition);
+    z-index: 3;
+}
+.navbar h3{
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    color: transparent;
+    background-image:linear-gradient(180deg,var(--orange) 15%,var(--yellow-color));
+    font-size: 1.5rem;
+    background-clip:text ;
+    margin-bottom:-1rem;
+}
+.navbar-header img{
+    margin: 0 auto;
+
+}
+.navbar-header{
+    position: relative;
+}
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the footer stays at the bottom */
+        }
+
+        footer {
+            background-color: #e58b24;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #0f0901;
+            border-top: 1px solid #b92121;
+        }
+
+        .address {
+            margin-bottom: 5px;
+            font-style: normal; /* Override default italic style if using <address> */
+        }
+    </style>
+</head>
+<body>
+
+
+    <footer>
+      <h2>  <div class="address">
+           <h1> HARI ENTERPRISES<br></h1><br>
+            131D, malaiyadipatti,sengundhar complex,nila supermarket near<br>
+            Rajapalayam -626117<br>
+            <a href="https://maps.app.goo.gl/YWgQyL19UMkSDjEJ8?g_st=aw"  class="nav-link">Company Location</a>
+        </div></h2>
+        <p>&copy; 2025 Designed and Develpoed by saro madurai</p>
+    </footer>
+    <img src="lo.jpeg" width="490px" height="400px">
+    <img src="lo2.jpeg" width="490px" height="400px">
+
+</body>
+</html>
